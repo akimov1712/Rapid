@@ -1,5 +1,6 @@
 package ru.topbun.rapid.presentation.screens.auth
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
@@ -25,16 +27,11 @@ data object AuthScreen: Screen{
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(20.dp)
+                .padding(32.dp),
+            verticalArrangement = Arrangement.Center
         ) {
-            Box(modifier = Modifier
-                .fillMaxWidth()
-            ){
-                val navigator = LocalNavigator.currentOrThrow
-                Navigator(screen = LoginScreen{
-                    navigator.replace(MainScreen)
-                })
-            }
+            val navigator = LocalNavigator.currentOrThrow
+            Navigator(screen = LoginScreen{ navigator.replace(MainScreen) })
         }
     }
 

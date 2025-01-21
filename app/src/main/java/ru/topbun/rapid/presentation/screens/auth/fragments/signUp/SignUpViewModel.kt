@@ -8,6 +8,7 @@ import ru.topbun.rapid.entity.User
 import ru.topbun.pawmate.presentation.theme.components.ScreenModelState
 import ru.topbun.rapid.repository.UserRepository
 import ru.topbun.pawmate.utils.validationEmail
+import ru.topbun.rapid.utils.isValidMobile
 
 class SignUpViewModel(
     private val context: Context
@@ -24,6 +25,7 @@ class SignUpViewModel(
         updateState { copy(signUpScreenState = Loading) }
         val user = User(
             name = stateValue.username.trim(),
+            phone = stateValue.phone.trim(),
             email = stateValue.email.trim(),
             password = stateValue.password.trim(),
         )
@@ -43,13 +45,23 @@ class SignUpViewModel(
             )
         }
         checkValidFields()
-}
+    }
 
     fun changeEmail(email: String) {
         updateState {
             copy(
                 email = email,
                 emailError = !email.validEmail()
+            )
+        }
+        checkValidFields()
+    }
+
+    fun changePhone(phone: String) {
+        updateState {
+            copy(
+                phone = phone,
+                phoneError = !phone.validPhone()
             )
         }
         checkValidFields()
@@ -79,6 +91,7 @@ class SignUpViewModel(
         copy(showPassword = !showPassword)
     }
 
+
     fun changeConfirmPasswordVisible() = updateState {
         copy(showConfirmPassword = !showConfirmPassword)
     }
@@ -86,6 +99,7 @@ class SignUpViewModel(
 
     private fun String.validUsername() = this.length in 2..48
     private fun String.validEmail() = this.validationEmail()
+    private fun String.validPhone() = this.isValidMobile().also { println("Валидация телефона $this равно: $it") }
     private fun String.validPassword() = this.length in 6..64
     private fun String.validConfirmPassword() = this == stateValue.password
 
@@ -93,6 +107,7 @@ class SignUpViewModel(
         val validFields = listOf(
             stateValue.username.validUsername(),
             stateValue.email.validEmail(),
+            stateValue.phone.validPhone(),
             stateValue.password.validPassword(),
             stateValue.confirmPassword.validConfirmPassword()
         ).contains(false)

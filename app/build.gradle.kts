@@ -56,10 +56,10 @@ android {
 }
 
 dependencies {
+    implementation (libs.maps.mobile)
+    implementation (libs.maps.compose)
 
-    implementation("androidx.work:work-runtime-ktx:2.10.0")
-    implementation("com.github.commandiron:WheelPickerCompose:1.1.11")
-    coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.6")
+    implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.coil.compose)
 
     // JsonSerialization

@@ -1,4 +1,4 @@
-package ru.topbun.pawmate.presentation.theme.components
+package ru.topbun.rapid.presentation.theme.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -43,6 +43,7 @@ fun AppTextField(
     keyboardActions: KeyboardActions = KeyboardActions.Default,
     visualTransformation: VisualTransformation = VisualTransformation.None,
     singleLine: Boolean = true,
+    textAlignment: Alignment = Alignment.CenterStart,
     maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
     minLines: Int = 1,
 ) {
@@ -51,8 +52,8 @@ fun AppTextField(
             modifier = Modifier
                 .fillMaxWidth()
                 .border(
-                    1.5.dp,
-                    if(errorText.isNullOrEmpty()) Colors.GRAY_DARK else Colors.RED,
+                    1.dp,
+                    Colors.GRAY_LIGHT.takeIf { errorText.isNullOrEmpty() } ?: Colors.RED,
                     RoundedCornerShape(8.dp)
                 ),
             verticalAlignment = Alignment.CenterVertically
@@ -61,7 +62,7 @@ fun AppTextField(
                 modifier = modifier
                     .weight(1f)
                     .padding(padding),
-                contentAlignment = Alignment.TopStart
+                contentAlignment = textAlignment
             ){
                 if (value.isEmpty()){
                     Text(

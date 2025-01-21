@@ -21,8 +21,9 @@ class LoginViewModel(
     fun login() = screenModelScope.launch {
         updateState { copy(loginScreenState = Loading) }
         val email = stateValue.email.trim()
+        val phone = stateValue.phone.trim()
         val password = stateValue.password.trim()
-        val isAuth = repository.login(email, password)
+        val isAuth = repository.login(email, phone, password)
         if (isAuth){
             updateState { copy(loginScreenState = Success) }
         } else {
@@ -30,11 +31,12 @@ class LoginViewModel(
         }
     }
 
-    fun changeEmail(email: String) = updateState { copy(email = email, validFields = validFields(email, password)) }
-
-    fun changePassword(password: String) = updateState { copy(password = password, validFields = validFields(email, password)) }
+    fun changeEmail(email: String) = updateState { copy(email = email, validFields = validFields(email, phone, password)) }
+    fun changePhone(phone: String) = updateState { copy(phone = phone, validFields = validFields(email, phone, password)) }
+    fun changePassword(password: String) = updateState { copy(password = password, validFields = validFields(email, phone, password)) }
     fun changePasswordVisible() = updateState { copy(showPassword = !showPassword) }
-    private fun validFields(email: String, password: String) = password.isNotEmpty() && email.isNotEmpty()
+
+    private fun validFields(email: String, phone: String, password: String) = password.isNotEmpty() && email.isNotEmpty() && phone.isNotEmpty()
 
     init {
         checkAuth()

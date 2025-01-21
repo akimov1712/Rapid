@@ -3,6 +3,8 @@ package ru.topbun.rapid.presentation.screens.auth.fragments.signUp
 data class SignUpState(
     val username: String = "",
     val usernameError: Boolean = false,
+    val phone: String = "",
+    val phoneError: Boolean = false,
     val email: String = "",
     val emailError: Boolean = false,
     val password: String = "",

@@ -4,7 +4,7 @@ import androidx.compose.ui.graphics.Color
 
 object Colors {
 
-    val BLACK = Color(0xff282828)
+    val BLACK = Color(0xff1E1E1E)
     val WHITE = Color(0xffffffff)
     val GRAY_LIGHT = Color(0xffD9D9D9)
     val GRAY_DARK = Color(0xffB3B3B3)

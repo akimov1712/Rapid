@@ -22,6 +22,9 @@ lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.3"
 composeBom = "2024.04.01"
 logbackClassic = "1.5.6"
+mapsCompose = "2.0.0"
+mapsMobile = "4.1.0"
+playServicesMaps = "19.0.0"
 roomRuntime = "2.4.2"
 slf4jAndroid = "1.7.36"
 voyagerVersion = "1.1.0-beta02"
@@ -31,6 +34,7 @@ jetbrainsKotlinJvm = "2.0.21"
 appcompat = "1.7.0"
 material = "1.12.0"
 runtimeAndroid = "1.7.4"
+workRuntimeKtx = "2.10.0"
 
 
 [libraries]
@@ -42,6 +46,7 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version = "2.
 androidx-room-ktx = { module = "androidx.room:room-ktx", version = "2.7.0-alpha12" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version = "2.7.0-alpha12" }
 
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 coil = { module = "io.coil-kt:coil", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 compose = { module = "com.github.bumptech.glide:compose", version.ref = "compose" }
@@ -59,6 +64,9 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
+maps-mobile = { module = "com.yandex.android:maps.mobile", version.ref = "mapsMobile" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 voyager-bottom-sheet-navigator = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyagerVersion" }
 voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyagerVersion" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyagerVersion" }

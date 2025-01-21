@@ -1,6 +1,7 @@
 package ru.topbun.rapid.presentation
 
 import android.Manifest
+import android.Manifest.permission.*
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity() {
         val launcher = rememberLauncherForActivityResult(contract = contract) {
         }
         SideEffect {
-            launcher.launch(arrayOf() )
+            launcher.launch(arrayOf(ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION) )
         }
     }
 

@@ -2,6 +2,7 @@ package ru.topbun.rapid.presentation.screens.auth.fragments.login
 
 data class LoginState(
     val email: String = "",
+    val phone: String = "",
     val password: String = "",
     val showPassword: Boolean = false,
     val validFields: Boolean = false,

@@ -18,7 +18,7 @@ class UserRepository(private val context: Context) {
         val oldUser = dao.userIsExists(user.email)
         if (oldUser != 0) return false
         dao.addUser(user)
-        val user = dao.getUser(user.email, user.password) ?: return false
+        val user = dao.getUser(user.email, user.password, user.phone) ?: return false
         settings.saveUserId(user.id)
         return settings.getUserId() == user.id
     }
@@ -28,8 +28,8 @@ class UserRepository(private val context: Context) {
         return dao.getUser(userId)
     }
 
-    suspend fun login(email: String, password: String): Boolean{
-        val user = dao.getUser(email, password) ?: return false
+    suspend fun login(email: String, phone: String, password: String): Boolean{
+        val user = dao.getUser(email, password, phone) ?: return false
         settings.saveUserId(user.id)
         return settings.getUserId() == user.id
     }

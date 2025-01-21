@@ -4,12 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import ru.topbun.rapid.database.dao.AppealDao
 import ru.topbun.rapid.database.dao.UserDao
+import ru.topbun.rapid.entity.Appeal
 import ru.topbun.rapid.entity.User
 
 @Database(
     entities = [
-        User::class
+        User::class,
+        Appeal::class,
     ],
     exportSchema = true,
     version = 3,
@@ -17,6 +20,7 @@ import ru.topbun.rapid.entity.User
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
+    abstract fun appealDao(): AppealDao
 
     companion object {
 
@@ -29,7 +33,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         private fun createDatabase(context: Context) = Room.databaseBuilder(
             context, AppDatabase::class.java, DB_NAME
-        ).fallbackToDestructiveMigration(false).createFromAsset("tips.db").build()
+        ).build()
 
     }
 
