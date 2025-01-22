@@ -10,5 +10,6 @@ object Colors {
     val GRAY_DARK = Color(0xffB3B3B3)
     val CYAN = Color(0xff50B1D4)
     val RED = Color(0xffFF271A)
+    val GREEN = Color(0xff1CCB0D)
 
 }

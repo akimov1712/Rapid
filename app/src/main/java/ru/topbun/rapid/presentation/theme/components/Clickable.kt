@@ -1,6 +1,7 @@
 package ru.topbun.pawmate.presentation.theme.components
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.material.ripple.rememberRipple
@@ -20,6 +21,6 @@ fun Modifier.noRippleClickable(onClick: () -> Unit): Modifier = clickable(
 @Composable
 fun Modifier.rippleClickable(onClick: () -> Unit): Modifier = clickable(
     interactionSource = remember { MutableInteractionSource() },
-    indication = rememberRipple(),
+    indication = null,
     onClick = onClick
 )

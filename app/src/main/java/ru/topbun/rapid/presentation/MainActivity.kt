@@ -42,8 +42,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     private fun requestPermissionNotify(){
         val contract = ActivityResultContracts.RequestMultiplePermissions()
-        val launcher = rememberLauncherForActivityResult(contract = contract) {
-        }
+        val launcher = rememberLauncherForActivityResult(contract = contract) {}
         SideEffect {
             launcher.launch(arrayOf(ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION) )
         }

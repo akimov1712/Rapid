@@ -1,4 +1,4 @@
-package ru.topbun.pawmate.presentation.theme.components
+package ru.topbun.rapid.presentation.theme.components
 
 import cafe.adriel.voyager.core.model.StateScreenModel
 

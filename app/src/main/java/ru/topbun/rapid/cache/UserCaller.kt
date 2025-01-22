@@ -1,4 +1,4 @@
-package ru.topbun.pawmate.cache
+package ru.topbun.rapid.cache
 
 import androidx.datastore.preferences.core.edit
 import kotlinx.coroutines.flow.firstOrNull

@@ -56,8 +56,9 @@ android {
 }
 
 dependencies {
-    implementation (libs.maps.mobile)
-    implementation (libs.maps.compose)
+    implementation ("com.google.maps.android:maps-compose:6.4.1")
+    implementation ("com.google.maps.android:maps-compose-utils:6.4.1")
+    implementation ("com.google.maps.android:maps-compose-widgets:6.4.1")
 
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.coil.compose)
@@ -70,6 +71,8 @@ dependencies {
 
     // Room
     implementation(libs.androidx.room.runtime)
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 

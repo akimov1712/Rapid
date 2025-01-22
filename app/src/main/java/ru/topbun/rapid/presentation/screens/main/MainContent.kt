@@ -50,6 +50,8 @@ import ru.topbun.pawmate.presentation.theme.Colors
 import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
 import ru.topbun.rapid.R
 import ru.topbun.rapid.entity.News
+import ru.topbun.rapid.presentation.screens.appeals.AppealsScreen
+import ru.topbun.rapid.presentation.screens.settings.SettingsScreen
 import ru.topbun.rapid.presentation.screens.submit.SubmitScreen
 import ru.topbun.rapid.presentation.screens.submit.SubmitViewModel
 import ru.topbun.rapid.presentation.theme.Fonts
@@ -67,16 +69,14 @@ object MainScreen: Screen {
         ) {
             val navigator = LocalNavigator.currentOrThrow
             Header()
-            Box(
-                modifier = Modifier.weight(1f)
-            ){
+            Box(modifier = Modifier.weight(1f)){
                 NewsList()
                 FloatingActionButton(
                     modifier = Modifier.padding(12.dp)
                         .size(56.dp)
                         .align(Alignment.BottomEnd),
                     containerColor = Colors.CYAN,
-                    onClick = { navigator.push(SubmitScreen) },
+                    onClick = { navigator.push(SubmitScreen()) },
                 ) {
                     Icon(
                         imageVector = Icons.Default.Add,
@@ -162,7 +162,7 @@ private fun Header() {
             fontFamily = Fonts.SF.SEMI_BOLD,
         )
         IconButton(
-            onClick = {}
+            onClick = { navigator.push(AppealsScreen) }
         ) {
             Icon(
                 modifier = Modifier.size(24.dp),
@@ -172,7 +172,7 @@ private fun Header() {
             )
         }
         IconButton(
-            onClick = {}
+            onClick = { navigator.push(SettingsScreen) }
         ) {
             Icon(
                 modifier = Modifier.size(24.dp),

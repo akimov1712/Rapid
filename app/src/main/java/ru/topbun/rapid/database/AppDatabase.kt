@@ -15,7 +15,7 @@ import ru.topbun.rapid.entity.User
         Appeal::class,
     ],
     exportSchema = true,
-    version = 3,
+    version = 4,
 )
 abstract class AppDatabase : RoomDatabase() {
 

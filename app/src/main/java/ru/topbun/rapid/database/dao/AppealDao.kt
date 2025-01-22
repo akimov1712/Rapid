@@ -19,4 +19,7 @@ interface AppealDao {
     @Query("SELECT * FROM appeals WHERE id = :id")
     suspend fun getAppeal(id: Int): Appeal
 
+    @Query("DELETE FROM appeals WHERE id = :id")
+    suspend fun deleteAppeal(id: Int)
+
 }

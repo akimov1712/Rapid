@@ -9,8 +9,8 @@ class AppealRepository(private val context: Context) {
     private val dao = AppDatabase.getInstance(context).appealDao()
 
     fun getAppeals() = dao.getAppeals()
-    suspend fun getAppeal(id: Int) = dao.getAppeal(id)
     suspend fun addAppeal(appeal: Appeal) = dao.addAppeal(appeal)
+    suspend fun deleteAppeal(id: Int) = dao.deleteAppeal(id)
 
 
 }

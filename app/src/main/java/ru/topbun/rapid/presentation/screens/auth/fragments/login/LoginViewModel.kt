@@ -4,7 +4,7 @@ import android.content.Context
 import cafe.adriel.voyager.core.model.screenModelScope
 import kotlinx.coroutines.launch
 import ru.topbun.rapid.presentation.screens.auth.fragments.login.LoginState.LoginScreenState.*
-import ru.topbun.pawmate.presentation.theme.components.ScreenModelState
+import ru.topbun.rapid.presentation.theme.components.ScreenModelState
 import ru.topbun.rapid.repository.UserRepository
 
 class LoginViewModel(

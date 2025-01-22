@@ -1,9 +1,9 @@
 package ru.topbun.rapid.repository
 
 import android.content.Context
-import ru.topbun.pawmate.cache.AppSettings.dataStore
-import ru.topbun.pawmate.cache.getUserId
-import ru.topbun.pawmate.cache.saveUserId
+import ru.topbun.rapid.cache.AppSettings.dataStore
+import ru.topbun.rapid.cache.getUserId
+import ru.topbun.rapid.cache.saveUserId
 import ru.topbun.rapid.database.AppDatabase
 import ru.topbun.rapid.entity.User
 

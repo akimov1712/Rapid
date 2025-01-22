@@ -5,7 +5,7 @@ import cafe.adriel.voyager.core.model.screenModelScope
 import kotlinx.coroutines.launch
 import ru.topbun.rapid.presentation.screens.auth.fragments.signUp.SignUpState.SignUpScreenState.*
 import ru.topbun.rapid.entity.User
-import ru.topbun.pawmate.presentation.theme.components.ScreenModelState
+import ru.topbun.rapid.presentation.theme.components.ScreenModelState
 import ru.topbun.rapid.repository.UserRepository
 import ru.topbun.pawmate.utils.validationEmail
 import ru.topbun.rapid.utils.isValidMobile
