@@ -2,7 +2,6 @@ package ru.topbun.rapid.presentation.screens.main
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,10 +16,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -35,30 +32,23 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.max
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import coil.compose.AsyncImagePainter.State.Empty.painter
-import okhttp3.internal.http2.Header
-import ru.topbun.pawmate.presentation.theme.Colors
-import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
+import ru.topbun.rapid.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Typography.APP_TEXT
 import ru.topbun.rapid.R
 import ru.topbun.rapid.entity.News
 import ru.topbun.rapid.presentation.screens.appeals.AppealsScreen
 import ru.topbun.rapid.presentation.screens.settings.SettingsScreen
 import ru.topbun.rapid.presentation.screens.submit.SubmitScreen
-import ru.topbun.rapid.presentation.screens.submit.SubmitViewModel
 import ru.topbun.rapid.presentation.theme.Fonts
 import ru.topbun.rapid.presentation.theme.components.bottomBorder
 import ru.topbun.rapid.utils.formatToNewsDate
 import ru.topbun.rapid.utils.toDate
-import java.util.Date
 
 object MainScreen: Screen {
 

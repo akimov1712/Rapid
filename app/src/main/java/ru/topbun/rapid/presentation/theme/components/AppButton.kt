@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ru.topbun.pawmate.presentation.theme.Colors
-import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
+import ru.topbun.rapid.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Typography.APP_TEXT
 
 @Composable
 fun AppButton(

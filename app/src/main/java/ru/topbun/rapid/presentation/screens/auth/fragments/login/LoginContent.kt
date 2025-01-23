@@ -41,9 +41,9 @@ import ru.topbun.rapid.presentation.screens.auth.fragments.login.LoginState.Logi
 import ru.topbun.rapid.presentation.screens.auth.fragments.login.LoginState.LoginScreenState.Loading
 import ru.topbun.rapid.presentation.screens.auth.fragments.login.LoginState.LoginScreenState.Success
 import ru.topbun.rapid.presentation.screens.auth.fragments.signUp.SignUpScreen
-import ru.topbun.pawmate.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Colors
 import ru.topbun.rapid.presentation.theme.Fonts
-import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
+import ru.topbun.rapid.presentation.theme.Typography.APP_TEXT
 import ru.topbun.pawmate.presentation.theme.components.AppButton
 import ru.topbun.rapid.presentation.theme.components.AppTextField
 import ru.topbun.pawmate.presentation.theme.components.noRippleClickable

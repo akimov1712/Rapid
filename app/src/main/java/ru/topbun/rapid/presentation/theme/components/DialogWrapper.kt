@@ -12,8 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import kotlinx.serialization.json.JsonNull.content
-import ru.topbun.pawmate.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Colors
 
 @Composable
 fun DialogWrapper(

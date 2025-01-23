@@ -1,8 +1,7 @@
-package ru.topbun.pawmate.presentation.theme
+package ru.topbun.rapid.presentation.theme
 
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
-import ru.topbun.rapid.presentation.theme.Fonts
 
 object Typography {
 

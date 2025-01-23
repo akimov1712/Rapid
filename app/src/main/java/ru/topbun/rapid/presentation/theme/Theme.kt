@@ -1,4 +1,4 @@
-package ru.topbun.pawmate.presentation.theme
+package ru.topbun.rapid.presentation.theme
 
 import androidx.compose.material3.lightColorScheme
 

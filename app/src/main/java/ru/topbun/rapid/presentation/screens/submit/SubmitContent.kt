@@ -57,8 +57,8 @@ import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.rememberCameraPositionState
 import kotlinx.parcelize.Parcelize
-import ru.topbun.pawmate.presentation.theme.Colors
-import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
+import ru.topbun.rapid.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Typography.APP_TEXT
 import ru.topbun.pawmate.presentation.theme.components.AppButton
 import ru.topbun.pawmate.presentation.theme.components.noRippleClickable
 import ru.topbun.pawmate.presentation.theme.components.rippleClickable

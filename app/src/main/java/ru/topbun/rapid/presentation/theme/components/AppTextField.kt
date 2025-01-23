@@ -23,11 +23,12 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ru.topbun.pawmate.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Colors
 import ru.topbun.rapid.presentation.theme.Fonts
-import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
+import ru.topbun.rapid.presentation.theme.Typography.APP_TEXT
 
 @Composable
 fun AppTextField(
@@ -43,6 +44,7 @@ fun AppTextField(
     keyboardActions: KeyboardActions = KeyboardActions.Default,
     visualTransformation: VisualTransformation = VisualTransformation.None,
     singleLine: Boolean = true,
+    borderWidth: Dp = 1.dp,
     textAlignment: Alignment = Alignment.CenterStart,
     maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
     minLines: Int = 1,
@@ -52,7 +54,7 @@ fun AppTextField(
             modifier = Modifier
                 .fillMaxWidth()
                 .border(
-                    1.dp,
+                    borderWidth,
                     Colors.GRAY_LIGHT.takeIf { errorText.isNullOrEmpty() } ?: Colors.RED,
                     RoundedCornerShape(8.dp)
                 ),

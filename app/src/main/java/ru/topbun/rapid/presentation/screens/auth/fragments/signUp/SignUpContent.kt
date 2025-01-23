@@ -37,8 +37,8 @@ import cafe.adriel.voyager.core.model.rememberScreenModel
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import ru.topbun.pawmate.presentation.theme.Colors
-import ru.topbun.pawmate.presentation.theme.Typography.APP_TEXT
+import ru.topbun.rapid.presentation.theme.Colors
+import ru.topbun.rapid.presentation.theme.Typography.APP_TEXT
 import ru.topbun.pawmate.presentation.theme.components.AppButton
 import ru.topbun.pawmate.presentation.theme.components.noRippleClickable
 import ru.topbun.rapid.R
